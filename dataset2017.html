@@ -1,16 +1,53 @@
 ﻿<!DOCTYPE html>
 <html>
     <head>
-        <title>Dataset</title>
-</script></head>
+        <title>ICCVW2017 Dataset</title>
+        <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    </head>
     <body>    
     <h1>Symmetry aware evaluation of 3D object detection and pose estimation in scenes of many parts in bulk</h1>
     
+
     
-    <p>The dataset will be available here: <a href="https://drive.google.com/open?id=0B2h14hEw1jRRNGpKdnRlWUxOMzA">https://drive.google.com/open?id=0B2h14hEw1jRRNGpKdnRlWUxOMzA</a>.</p>
+    <h2>Description</h2>
     
+    <p>The datasets consist in a total of 2601 independent scenes depicting various numbers of object instances in bulk, fully annotated for evaluation of object detection and pose estimation methods.</p>
     
-    <p>Description and some Python scripts will be made available.</p>
+    <p>Synthetic datasets are made of scenes representing the inside of a bin, in which a random number of object instances have been dropped (in some scenes, there are no visible instances at all).</p>
+
+    <p>Real data consists similarly in scenes of various numbers of object instances (between 0 and 11) lying on a surface at various distances from the camera. Each instance was covered by 19 fiducial markers.
+    We used two different background surfaces: a planar one (<em>markers flat</em>, 308 scenes), representative of the typical bottom of a bin; and a bumpy surface (<em>markers bump</em>, 325 scenes), increasing the variability of poses and producing a pose distribution more consistent with the scenario of many instances piled up.
+    An additional dataset of 46 scenes (<em>markers clutter</em>) targets the problem of object detection and pose estimation in a cluttered environment.</p>
+
+    <p>The proposed evaluation methodology is based on the symmetry class of the object considered .The symmetry class depends on what static configurations of the object we wish to distinguish, and this choice is not necessarily obvious. 
+    For example, the <em>gear</em> object could be considered as an object with a cyclic symmetry of order 2 -- <em>i.e.</em> an invariance under rotation of \(1/2\) turn about a given axis -- , a cyclic symmetry of order its number of teeth, or a revolution symmetry depending on the level of details considered. We considered this latter option in our experiments, and synthesize the choices of symmetry classes we made below:</p>
+
+    <img src="dataset2017/objects.PNG" style='max-width:80%' border="0" alt="objects">
+    
+    <h3>Folder description</h3>
+    <ul>
+        <li>rgb: RGB or intensity image.</li>
+        <li>depth: depth image from the same viewpoint as the RGB data, encoded as a 16bit unsigned PNG image.</li>
+        <li>depth_gt: ideal depth image, if available.</li>
+        <li>segmentation: segmentation of the various instances of the scene.</li>
+        <li>gt: ground truth annotations, consisting in the pose of the instances described by a rotation matrix R and a translation vector t, as well as additional information (occlusion rate and color in the segmentation image).</li>
+        <li>mesh.ply: 3D triangular mesh model of the object.</li>
+        <li>poseutils.json: description of geometric properties of the object, notably its proper symmetries. Used by evaluation scripts.</li>
+        <li>camera_params.txt: camera parameters considered. <a style='color:red'>(description to come)</a></li>
+    </ul>
+    
+    <h3>Sources</h3>
+
+    <p>Original models of <em>tless</em> objects are taken from the T-LESS dataset (<a href="http://cmp.felk.cvut.cz/t-less/">http://cmp.felk.cvut.cz/t-less/</a>).</p> 
+    <p style='color:red'>(Origin of the other models to come)</p>
+    
+    <h2>Download</h2>
+    <p>The datasets can be downloaded here (<a style='color:red'>not yet complete</a>): <a href="https://drive.google.com/open?id=0B2h14hEw1jRRNGpKdnRlWUxOMzA">https://drive.google.com/open?id=0B2h14hEw1jRRNGpKdnRlWUxOMzA</a>.</p>
+    
+    <p>Please cite the following paper if you use this dataset:<br>
+    <a style='font-weight: bold'>Romain Brégier, Frédéric Devernay, Laetitia Leyrit and James L. Crowley, "Symmetry Aware Evaluation of 3D Object Detection and Pose Estimation in Scenes of Many Parts in Bulk", in <em>IEEE International Conference on Computer Vision Workshop (ICCVW)</em>, 2017.</a></p>
     
     </body>
 </html>
