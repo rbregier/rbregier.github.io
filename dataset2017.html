@@ -1,53 +1,136 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
-        <title>ICCVW2017 Dataset</title>
+        <title>Siléane Dataset for Object Detection and Pose Estimation</title>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
         <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
     </head>
     <body>    
-    <h1>Symmetry aware evaluation of 3D object detection and pose estimation in scenes of many parts in bulk</h1>
+    <h1><em>Siléane</em> Dataset  for Object Detection and Pose Estimation</h1>
+        
+    <p>This dataset consists in a total of 2601 independent scenes depicting various numbers of object instances in bulk, fully annotated. It is primarily designed for the evaluation of object detection and pose estimation methods based on depth or RGBD data, and consists of both synthetic and real data.</p>
     
+    <p>Synthetic data is made of scenes representing the inside of a bin, in which a random number of object instances have been dropped (in some scenes, there are no visible instances at all).</p>
+    <figure>
+    <img src="iccvw2017/bunny_3_080/bunny_3_080.PNG" style='max-width:32%' alt="bunny" /> 
+    <img src="iccvw2017/bunny_3_080/bunny_3_080_depth_gt_colored.PNG" style='max-width:32%' alt="bunny" /> 
+    <img src="iccvw2017/bunny_3_080/bunny_3_080_depth_colored.PNG" style='max-width:32%' alt="bunny" /> 
+    <figcaption>Sample scene from the synthetic <em>bunny</em> dataset (RGB, ideal and noisy depth image).</figcaption>
+    </figure>
 
     
-    <h2>Description</h2>
-    
-    <p>The datasets consist in a total of 2601 independent scenes depicting various numbers of object instances in bulk, fully annotated for evaluation of object detection and pose estimation methods.</p>
-    
-    <p>Synthetic datasets are made of scenes representing the inside of a bin, in which a random number of object instances have been dropped (in some scenes, there are no visible instances at all).</p>
+    <p>Real data consists similarly in scenes of various numbers of object instances (between 0 and 11) lying on a surface at various distances from the camera.
+    We considered two different background surfaces: a planar one (<em>markers flat</em>, 308 scenes), representative of the typical bottom of a bin; and a bumpy surface (<em>markers bump</em>, 325 scenes), increasing the variability of poses and producing a pose distribution more consistent with the scenario of many instances piled up.
+    In order to validate the use of synthetic data for evaluation, we also propose a synthetic dataset (<em>markers flat simulation</em>) reproducing real scenes that enables pairwise comparison.</p>
 
-    <p>Real data consists similarly in scenes of various numbers of object instances (between 0 and 11) lying on a surface at various distances from the camera. Each instance was covered by 19 fiducial markers.
-    We used two different background surfaces: a planar one (<em>markers flat</em>, 308 scenes), representative of the typical bottom of a bin; and a bumpy surface (<em>markers bump</em>, 325 scenes), increasing the variability of poses and producing a pose distribution more consistent with the scenario of many instances piled up.
-    An additional dataset of 46 scenes (<em>markers clutter</em>) targets the problem of object detection and pose estimation in a cluttered environment.</p>
+    <figure>
+    <img src="iccvw2017/2016_10_10_plat_h2_10_019_intensity_cropped.PNG" style='max-width:49%' alt="markers flat" /> 
+    <img src="iccvw2017/2016_10_10_plat_h2_10_019_depth_colored_cropped.PNG" style='max-width:49%' alt="markers flat" /> 
+    <figcaption>Sample scene from the real <em>markers flat</em> dataset (RGB and depth image).</figcaption>
+    <img src="iccvw2017/2016_10_10_plat_h2_10_019_intensity_simulation_cropped.PNG" style='max-width:49%' alt="markers flat" /> 
+    <img src="iccvw2017/2016_10_10_plat_h2_10_019_depth_simulation_colored_cropped.PNG" style='max-width:49%' alt="markers flat" /> 
+    <figcaption>Corresponding scene in the synthetic <em> markers flat simulation</em> dataset. </figcaption>
+    </figure>
 
-    <p>The proposed evaluation methodology is based on the symmetry class of the object considered .The symmetry class depends on what static configurations of the object we wish to distinguish, and this choice is not necessarily obvious. 
-    For example, the <em>gear</em> object could be considered as an object with a cyclic symmetry of order 2 -- <em>i.e.</em> an invariance under rotation of \(1/2\) turn about a given axis -- , a cyclic symmetry of order its number of teeth, or a revolution symmetry depending on the level of details considered. We considered this latter option in our experiments, and synthesize the choices of symmetry classes we made below:</p>
-
-    <img src="dataset2017/objects.PNG" style='max-width:80%' border="0" alt="objects">
+    <p>Lastly, an additional dataset of 46 scenes (<em>markers clutter</em>) targets the problem of object detection and pose estimation in a cluttered environment.</p>
+       
     
-    <h3>Folder description</h3>
+    <h2>Dataset description</h2>
+        
+    <h3> Archive description</h3>
     <ul>
-        <li>rgb: RGB or intensity image.</li>
-        <li>depth: depth image from the same viewpoint as the RGB data, encoded as a 16bit unsigned PNG image.</li>
-        <li>depth_gt: ideal depth image, if available.</li>
-        <li>segmentation: segmentation of the various instances of the scene.</li>
-        <li>gt: ground truth annotations, consisting in the pose of the instances described by a rotation matrix R and a translation vector t, as well as additional information (occlusion rate and color in the segmentation image).</li>
-        <li>mesh.ply: 3D triangular mesh model of the object.</li>
-        <li>poseutils.json: description of geometric properties of the object, notably its proper symmetries. Used by evaluation scripts.</li>
-        <li>camera_params.txt: camera parameters considered. <a style='color:red'>(description to come)</a></li>
+        <li><em>rgb</em>: RGB or intensity image.</li>
+        <li><em>depth</em>: depth image from the same viewpoint as the RGB data, encoded as a 16bit unsigned PNG image.</li>
+        <li><em>depth_gt</em>: ideal depth image, if available.</li>
+        <li><em>segmentation</em>: segmentation of the various instances of the scene.</li>
+        <li><em>gt</em>: ground truth annotations for each scene.</li>
+        <li><em>mesh.ply</em>: 3D triangular mesh model of the object.</li>
+        <li><em>poseutils.json</em>: description of geometric properties of the object used by evaluation scripts, notably its symmetry group.</li>
+        <li><em>camera_params.txt</em>: camera parameters considered.</li>
     </ul>
     
-    <h3>Sources</h3>
+    <h3> File format </h3>
+    
+    <h4> Ground truth </h4>
+    <p>Ground truth pose annotations for a dataset are provided in JSON format for each scene such as follows:</p>
+<p class="code"><code>
+[{"R": [[-0.71494568144, -0.29784533696000004, -0.63256695358],<br/>
+ [0.65633897998, -0.5977253336480001, -0.46037342646400004],<br/>
+ [-0.24098120024000003, -0.7443202964360001, 0.622828612352]],<br/>
+"segmentation_id": 65535,<br/>
+"occlusion_rate": 0.10165770117466244,<br/>
+"t": [-0.133393, -0.043768, 0.221253]},<br/>
+<br/>
+{"R": [[-0.160880605701, 0.10835646816000002, 0.9810084635799999],<br/>
+ [0.40743837264000005, -0.8980182051009999, 0.16600775556000003],<br/>
+ [0.8989508898199999, 0.42640764324, 0.10032506454899998]],<br/>
+ "segmentation_id": 64599,<br/>
+ "occlusion_rate": 0.09766150740242263, "t": [-0.132352, 0.177468, 0.233303]}]
+</code></p>
+    <p>In this example, the scene contains two object instances. Their poses are described by a rotation matrix \(R\) and a translation vector \(t\) in such a way that a point \(x\) expressed in the object frame can be expressed in the absolute coordinates system by \(R x + t\). Occlusion rate of each instance is also provided (defined as the fraction of the object's silhouette visible in the depth data), as well as the color in the 16bit segmentation image.</p>
+    
+    <h4>Camera parameters</h4>
+    Camera parameters are described within a text file of the following format:
+    <p class="code"><code>
+    width	506<br/>
+    height	474<br/>
+    fu	1152.31<br/>
+    fv	1152.31<br/>
+    cu	139.459<br/>
+    cv	237.001<br/>
+    clip_start	0.87599<br/>
+    clip_end	1.70602<br/>
+    # Location of the camera, expressed by a 3D translation vector.<br/>
+    location	-0.1	0	1.5<br/>
+    # Orientation of the camera, expressed by an unit quaternion (w x y z).<br/>
+    rotation	8.72098e-008	1	-4.57187e-009	-9.94784e-010<br/>
+    </code></p>
+    <p>
+    The coordinates \((x, y, z)\) of in camera frame can be computed  from the value of the depth image \(D(u, v) \in [0, 1] \) at a pixel \((u, v)\) as follows:
+    \[
+    \left\lbrace
+    \begin{align}
+    z &= \mathrm{clip\_start} + (\mathrm{clip\_end} - \mathrm{clip\_start})D(u, v) \\
+    x &= \cfrac{z}{f_u} (u - c_u)   \\
+    y &= \cfrac{z}{f_v} (v - c_v).
+    \end{align}\right.
+    \]
+    White pixels in the depth image represent points which have not been reconstructed.
+    </p>
+    
+    <h3>Symmetry group</h3>
+    
+    <p>The proposed evaluation methodology is based on the symmetry group of the object considered .The symmetry group depends on what static configurations of the object we wish to distinguish, and this choice is not necessarily obvious. 
+    For example, the <em>gear</em> object could be considered as an object with a cyclic symmetry of order 2 -- <em>i.e.</em> an invariance under rotation of 1/2 turn about a given axis -- , a cyclic symmetry of order its number of teeth, or a revolution symmetry depending on the level of details considered. We considered this latter option in our experiments, and synthesize the choices of symmetry classes we made below:</p>
 
-    <p>Original models of <em>tless</em> objects are taken from the T-LESS dataset (<a href="http://cmp.felk.cvut.cz/t-less/">http://cmp.felk.cvut.cz/t-less/</a>).</p> 
-    <p style='color:red'>(Origin of the other models to come)</p>
+    <figure><img src="iccvw2017/objects.PNG" style='max-width: 500px;' alt="objects" /></figure>
+
+    <h3>3D models</h3>
+    <p>3D models of the <em>tless</em> objects used in this dataset are taken from the <a href="http://cmp.felk.cvut.cz/t-less/">T-LESS</a> dataset of T. Hodaň et al. The <em>bunny</em> and <em>markers</em> models are modified versions of original Stanford bunny from the <a href="http://graphics.stanford.edu/data/3Dscanrep/">Stanford University Computer Graphics Laboratory</a>. Other models have been downloaded from online archives in 2016-2017: "Pepper & Salt Mill Peugeot" by Ramenta (3D Warehouse), "Samdan 2" by Metin N. (3D Warehouse).</p>
+    
+    <!--
+    brick: thingiverse
+    gear: a piece from a motor on Thingiverse? -->
     
     <h2>Download</h2>
-    <p>The datasets can be downloaded here (<a style='color:red'>not yet complete</a>): <a href="https://drive.google.com/open?id=0B2h14hEw1jRRNGpKdnRlWUxOMzA">https://drive.google.com/open?id=0B2h14hEw1jRRNGpKdnRlWUxOMzA</a>.</p>
     
-    <p>Please cite the following paper if you use this dataset:<br>
-    <a style='font-weight: bold'>Romain Brégier, Frédéric Devernay, Laetitia Leyrit and James L. Crowley, "Symmetry Aware Evaluation of 3D Object Detection and Pose Estimation in Scenes of Many Parts in Bulk", in <em>IEEE International Conference on Computer Vision Workshop (ICCVW)</em>, 2017.</a></p>
+    <p>The data can be downloaded as a set of 7zip archives here <span style='color: red;'>(nearly ready)</span>: <br/> <a href="https://drive.google.com/open?id=0B2h14hEw1jRRNGpKdnRlWUxOMzA">https://drive.google.com/open?id=0B2h14hEw1jRRNGpKdnRlWUxOMzA</a></p>
+    
+    <p>Additionally, we provide some evaluation tools on GitHub to ease the use of this dataset: <a href = https://github.com/rbregier/pose_recovery_evaluation>GitHub link</a>.</p>
+
+    <p>Please cite the following paper if you use this dataset:<br/>
+    <cite>Romain Brégier, Frédéric Devernay, Laetitia Leyrit and James L. Crowley, "Symmetry Aware Evaluation of 3D Object Detection and Pose Estimation in Scenes of Many Parts in Bulk", in <em>IEEE International Conference on Computer Vision Workshop (ICCVW)</em>, 2017.</cite>
+    <a href="iccvw2017/rbregier_iccvw_2017.pdf">article</a>, 
+    <a href="iccvw2017/rbregier_iccvw_2017_supp_mat.pdf">supplementary material </a>,
+    <a href="iccvw2017/rbregier_iccvw_2017_poster.pdf">poster</a>.</p>
+    
+    <p><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+    The <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">Siléane Dataset</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+       
+    
+    <div class="right"> <p><a href="index.html"> Back to home page.</a></p></div>
     
     </body>
 </html>
