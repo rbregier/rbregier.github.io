@@ -25,7 +25,7 @@ author:
 description: >- # this means to ignore newlines until "baseurl:"
 # Description here
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://rbregier.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://rbregier.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 destination: ./docs
 
 social_links:
