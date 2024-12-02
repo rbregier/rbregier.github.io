@@ -7,7 +7,7 @@ layout: home
 
 I work as a research scientist at [NAVER LABS Europe](https://europe.naverlabs.com), in computer vision and robotics.
 
-[Contact](mailto:romain.bregier@naverlabs.com) / [Google Scholar](https://scholar.google.fr/citations?user=toKz9AQAAAAJ&hl) / [NAVER LABS profile](https://europe.naverlabs.com/people_user/romain-bregier/) / [GitHub](https://github.com/rbregier/)
+[Contact](mailto:romain.bregier@centraliens-lyon.net) / [Google Scholar](https://scholar.google.fr/citations?user=toKz9AQAAAAJ&hl) / [NAVER LABS profile](https://europe.naverlabs.com/people_user/romain-bregier/) / [GitHub](https://github.com/rbregier/)
 
 ## Academic bio
 
