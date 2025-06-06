@@ -37,7 +37,7 @@ See [Google Scholar](https://scholar.google.fr/citations?user=toKz9AQAAAAJ&hl) f
 
 <div style="display: flex; gap: 2em; align-items: flex-start; flex-wrap: wrap;">
 <div style="min-width: 80;">
-<img src="/assets/iccvw2017/bunny_3_080/bunny_3_080_depth_gt_colored.jpg/" alt="depth image of parts in bulk" width="80">
+<img src="/assets/iccvw2017/bunny_3_080/bunny_3_080_depth_gt_colored.jpg" alt="depth image of parts in bulk" width="80">
 </div>
 <div style="min-width: 250px;">
 <a href="https://theses.hal.science/tel-01977050">PhD thesis (in French).</a><br/>
