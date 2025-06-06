@@ -4,6 +4,7 @@
 ## Useful command lines
 
 ```
+cd docs/
 bundle exec jekyll serve --livereload
 ```
 

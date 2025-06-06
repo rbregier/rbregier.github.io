@@ -5,45 +5,59 @@
 layout: home
 ---
 
-I work as a research scientist at [NAVER LABS Europe](https://europe.naverlabs.com), in computer vision and robotics.
-
-[Contact](mailto:romain.bregier@centraliens-lyon.net) / [Google Scholar](https://scholar.google.fr/citations?user=toKz9AQAAAAJ&hl) / [NAVER LABS profile](https://europe.naverlabs.com/people_user/romain-bregier/) / [GitHub](https://github.com/rbregier/)
+[Contact](mailto:romain.bregier@centraliens-lyon.net) / [Google Scholar](https://scholar.google.fr/citations?user=toKz9AQAAAAJ&hl) / [GitHub](https://github.com/rbregier/)
 
 ## Academic bio
 
-I work as a research scientist at [NAVER LABS Europe](https://europe.naverlabs.com), in computer vision and robotics.
-I did my Ph.D. at [Inria Grenoble](https://www.inria.fr/) and [Siléane](https://www.sileane.com/) -- a French company where I worked as R&D engineer for 6 years on robotic perception and manipulation for industrial applications. I was advised by [Fréderic Devernay](https://www.linkedin.com/in/devernay/), [Laetitia Leyrit](https://www.linkedin.com/in/laetitia-leyrit-31b0031b7/) and [James Crowley](http://crowley-coutaz.fr/jlc/jlc.html).
-Before, I obtained a MSc. degree in Engineering from the [École Centrale de Lyon](https://www.ec-lyon.fr/), and a Master of Signal and Image Processing from the [University of Lyon](https://www.universite-lyon.fr/).
+I work as a research scientist at [NAVER LABS Europe](https://europe.naverlabs.com) since 2019.
+In 2018, I finished my Ph.D. at [Inria Grenoble](https://www.inria.fr/) and [Siléane](https://www.sileane.com/), a French SME where I worked as R&D engineer for 6 years on robotic perception and manipulation for industrial applications. I was advised by [Fréderic Devernay](https://www.linkedin.com/in/devernay/), [Laetitia Leyrit](https://www.linkedin.com/in/laetitia-leyrit-31b0031b7/) and [James Crowley](http://crowley-coutaz.fr/jlc/jlc.html).
+Before, I obtained a MSc. degree in Engineering from the [École Centrale de Lyon](https://www.ec-lyon.fr/), and a Master of Signal and Image Processing from the [University of Lyon](https://www.universite-lyon.fr/) in 2013.
+
+## Research
+
+My research lies at the intersection of computer vision, computer graphics and robotics, with a particular focus on geometry.
+See [Google Scholar](https://scholar.google.fr/citations?user=toKz9AQAAAAJ&hl) for an up to date list of my publications.
 
 
+### Open-source libraries
 
-<!-- 
+<div style="display: flex; gap: 2em; align-items: flex-start; flex-wrap: wrap;">
+<div style="min-width: 80;">
+<img src="/assets/roma_logo.png" alt="RoMa" width="80" style="vertical-align:middle;"/>
+</div>
+<div style="min-width: 250px;">
+<a href="https://github.com/naver/roma/tree/master">RoMa: a PyTorch library for spatial transformations.</a><br/>
+<code>pip install roma</code> | 
+<img src="https://static.pepy.tech/badge/roma" alt="Downloads"/>
+</div>
+</div>
 
-## Publications
-
-
-<p><cite><span class="author-is-me">R. Brégier</span>, F. Devernay, L. Leyrit, and J. L. Crowley, "Defining the Pose of Any 3D Rigid Object and an Associated Distance", in <em>International Journal of Computer Vision</em>, 2017.</cite>
-(<a href="http://link.springer.com/article/10.1007/s11263-017-1052-4">article</a>,
-<a href="https://hal.inria.fr/hal-01415027">HAL</a>).<br/>
-Article in which we introduce a notion of pose of a rigid object accounting for its potential symmetries, along with some tools enabling to deal with it in an efficient and rigorous manner.</p>
-    
-<p><cite><span class="author-is-me">R. Brégier</span>, F. Devernay, L. Leyrit and J. L. Crowley, "Symmetry Aware Evaluation of 3D Object Detection and Pose Estimation in Scenes of Many Parts in Bulk", in <em>The IEEE International Conference on Computer Vision (ICCV) Workshops</em>, 2017.</cite>
-(<a href="http://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w31/Bregier_Symmetry_Aware_Evaluation_ICCV_2017_paper.pdf">paper</a>, 
-<a href="http://openaccess.thecvf.com/content_ICCV_2017_workshops/supplemental/Bregier_Symmetry_Aware_Evaluation_ICCV_2017_supplemental.pdf">supplementary material </a>,
-<a href="iccvw2017/rbregier_iccvw_2017_poster.pdf">poster</a>).<br/>
-<em>Best Paper Award</em>. 
-The associated dataset can be found <a href="dataset2017.html">here</a>.</p>
-
-<p><cite>M. Grard, <span class="author-is-me">R. Brégier</span>, F. Sella, E. Dellandréa, L. Chen, "Object Segmentation in Depth Maps with One User Click and a Synthetically Trained Fully Convolutional Network", 2018, in <em>Human-Friendly Robotics</em>, 2018</cite>
-(<a href="https://arxiv.org/abs/1801.01281">paper</a>).</p>
+### Bin picking and industrial robotics
 
 
-## PhD dissertation
+<div style="display: flex; gap: 2em; align-items: flex-start; flex-wrap: wrap;">
+<div style="min-width: 80;">
+<img src="/assets/iccvw2017/bunny_3_080/bunny_3_080_depth_gt_colored.jpg/" alt="depth image of parts in bulk" width="80">
+</div>
+<div style="min-width: 250px;">
+<a href="https://theses.hal.science/tel-01977050">PhD thesis (in French).</a><br/>
+<a href="https://arxiv.org/pdf/1612.04631">IJCV article on modeling pose of rigid objects.</a><br/>
+<a class="page-link" href="/dataset2017.html">Siléane Dataset.</a><br/>
+</div>
+</div>
 
-*R. Brégier, "Détection et estimation de pose d'instances d'objet rigide pour la manipulation robotisée" ("Detection and pose estimation of instances of a rigid object for robotic bin-picking"), 2018.* ([dissertation](http://hal.univ-nantes.fr/LJK_GI_IMAGINE/tel-01977050)).
+Videos of some applications I worked on in industrial robotics (before 2019):
 
-
-
-<h2>Patents</h2>
-
-<p><cite> H. Henry, F. Sella, <span class="author-is-me">R. Brégier</span>, "Method And Facility For Automatically Gripping An Object",   WO 2015/162390 A1.</cite></p> -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fy18yp7OTcg?si=9Q9OULxqxzMi3N_L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RaHfrwJJLOc?si=v3iWKxebyZzG1J5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jHx5bZA5SWQ?si=euTuOHF_sCzktB46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5gR6rpob_88?si=IKm7XN2WFdWsBwtc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/GTadp8y8m1o?si=XcgHdGK1uaEJnK9W&amp;start=57" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TpLkhVij5_M?si=3dGkJpJrcVAUxUfL&amp;start=46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- <ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul> -->
