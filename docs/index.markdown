@@ -16,7 +16,8 @@ Before, I obtained a MSc. degree in Engineering from the [École Centrale de Lyo
 ## Research
 
 My research lies at the intersection of computer vision, computer graphics and robotics, with a particular focus on geometry.
-See [Google Scholar](https://scholar.google.fr/citations?user=toKz9AQAAAAJ&hl) for an up to date list of my publications.
+My work includes applications in human, object, and camera pose estimation, 3D reconstruction, and robotic manipulation.
+For a current list of my publications, visit my [Google Scholar](https://scholar.google.fr/citations?user=toKz9AQAAAAJ&hl) profile.
 
 
 ### Open-source libraries
